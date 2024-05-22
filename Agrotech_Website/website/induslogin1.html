@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>AgroGrowth - Login</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size: 16px;
+    background-image: url("industry.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;}
+
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+
+.login-box-container {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;; /* This will make the login box vertically centered on the screen */
+}
+</style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-green w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>AgroGrowth</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact Us</a>
+
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-green w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-green w3-margin-right" onclick="w3_open()">☰</a>
+  <span>AgroGrowth</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b style="color: white;">Welcome Industrialist</b></h1>
+    <h1 class="w3-xxxlarge"><b style="color: white;">Login here</b></h1>
+    <hr style="width:50px;border:5px solid white" class="w3-round">
+  </div>
+
+  <!-- Login Form -->
+  <div class="login-box-container">
+    <form id="login-form" class="w3-container w3-card-4 w3-light-grey w3-text-green w3-margin" style="max-width: 400px;">
+      <h2 class="w3-text-green">Login</h2>
+      <label for="username"><b>Username</b></label>
+      <input type="text" id="username" name="username" required class="w3-input w3-border w3-round">
+      <label for="password"><b>Password</b></label>
+      <input type="password" id="password" name="password" required class="w3-input w3-border w3-round">
+      <button type="submit" class="w3-button w3-block w3-green w3-round" style="margin-top: 10px;">Login</button>
+    </form>
+  </div>
+</div>
+
+<script>
+document.getElementById("login-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    // Basic authentication logic (replace with actual authentication)
+    if (username === "admin" && password === "1") {
+        alert("Admin login successful!");
+        // Redirect to the admin page
+        window.location.href = "C:/Users/ASUS/Desktop/website template/website/secondtemplate/afterloginindustrialist.html";
+    } else if (username === "incharge" && password === "1") {
+        alert("Incharge login successful!");
+        // Redirect to the incharge page
+        window.location.href = "incharge.html";
+    } else {
+        alert("Invalid username or password");
+    }
+});
+</script>
+
+<!-- Script to open and close sidebar -->
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+</body>
+</html>
