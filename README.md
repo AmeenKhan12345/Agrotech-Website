@@ -6,11 +6,7 @@ A static front-end prototype for **AgroGrowth Technologies**, a platform dedicat
 
 ## Demo
 
-The live site is deployed via GitHub Pages:
-
-```
-https://ameenkhan12345.github.io/Agrotech-Website/
-```
+[Live Website](https://ameenkhan12345.github.io/Agrotech-Website/)
 
 
 ---
